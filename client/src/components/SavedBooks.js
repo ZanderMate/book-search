@@ -17,7 +17,7 @@ const SavedBooks = (props) => {
         <div className="text-center">
             {props.results.length > 0 ? (
                 <ul className="list-group">
-                    <h2>Search Results</h2>
+                    <h2>Saved Books</h2>
                     {props.results.map((result) => (
                         <li className="list-group-item" key={result._id}>
                             <img src={result.image} alt='Book Cover' />
@@ -36,6 +36,7 @@ const SavedBooks = (props) => {
                                 >
                                     Delete Book
                                     </button>
+                                <br />
                                 <br />
                                 <a
                                     className="btn btn-primary"

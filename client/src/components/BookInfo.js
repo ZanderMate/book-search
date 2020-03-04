@@ -23,7 +23,12 @@ const BookInfo = (props) => {
           <h2>Search Results</h2>
           {props.results.map((result, i) => (
             <li className="list-group-item" key={result.id}>
-              <img src={result.volumeInfo.imageLinks.smallThumbnail} alt='Book Cover' />
+              {(result.volumeInfo.imageLinks) ? (
+                <img src={result.volumeInfo.imageLinks.smallThumbnail} alt='Book Cover' />
+              ) : (
+                  <p></p>
+                )
+              }
               <p><b>{result.volumeInfo.title}</b></p>
               <p>{result.volumeInfo.authors}</p>
               {(result.volumeInfo.description) ? (

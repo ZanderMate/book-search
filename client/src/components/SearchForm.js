@@ -4,7 +4,7 @@ function SearchForm(props) {
   return (
     <div className="card text-center">
       <div className="card-header">
-        <h2>{props.searchtype} Search for a Book</h2>
+        <h2>{props.searchtype} Search for Book</h2>
       </div>
       <div className="card-body"></div>
       <form>

@@ -4,6 +4,7 @@ import Search from './pages/Search'
 import Navbar from './Navbar';
 import Container from './Container';
 import Header from './Header';
+import Home from './pages/Home'
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 
 
@@ -35,6 +36,7 @@ export default class BookContainer extends Component {
                         <Header />
                     </Container>
                 </div>
+                <Route exact path="/" component={Home} />
                 <Route exact path="/search" component={Search} />
                 <Route exact path="/saved" component={Saved} />
             </Router>
