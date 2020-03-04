@@ -1,11 +1,11 @@
 import React from 'react';
-import Book from './components/Book'
 import './App.css';
+import BookContainer from './components/BookContainer';
 
 const App = () => {
   return (
     <div className="App">
-      <Book />
+      <BookContainer/>
     </div>
   );
 }
