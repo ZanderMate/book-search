@@ -8,12 +8,12 @@ function Navbar(props) {
                 <b>Google Book Search</b>
             </li>
             <li className="nav-item">
-                <a href="/search" onClick={() => props.handlePageChange("Search")} className="nav-link">
+                <a href="/search" className="nav-link">
                     Search
           </a>
             </li>
             <li className="nav-item">
-                <a href="/saved" onClick={() => props.handlePageChange("Saved")} className="nav-link">
+                <a href="/saved" className="nav-link">
                     Saved
           </a>
             </li>
