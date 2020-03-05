@@ -17,6 +17,8 @@ mongoose.connect(process.env.DB,
     );
 
 app.use(logger('dev'));
+app.use(express.static('public'))
+app.use(express.static('client'))
 
 app.use(bodyParser.json());
 app.use('/api', routes);
@@ -27,10 +29,9 @@ app.use((err, req, res, next) => {
     next();
 });
 
-app.use(express.static('public'))
-app.use(express.static('build'))
-// app.get('*', function (req, res) {
-//     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-// });
+
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+});
 
 app.listen(port, () => { console.log('Server running on port ' + port) });
