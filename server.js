@@ -8,6 +8,7 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
+app.use(express.static(path.join(__dirname, 'client', 'build')));
 const port = process.env.PORT || 3001;
 
 mongoose.connect(process.env.DB,
@@ -17,7 +18,6 @@ mongoose.connect(process.env.DB,
     );
 
 app.use(logger('dev'));
-app.use(express.static(path.join(__dirname, '/client/public')));
 
 app.use(bodyParser.json());
 app.use('/api', routes);
